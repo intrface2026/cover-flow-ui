@@ -200,7 +200,7 @@ export const HelixFlow: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="w-full h-full relative flex items-center justify-center bg-transparent dark:bg-black perspective-1000 overflow-hidden animate-fade-in transition-colors duration-500"
+      className="w-full h-[400px] md:h-[600px] relative flex items-center justify-center bg-transparent dark:bg-black perspective-1000 overflow-hidden animate-fade-in transition-colors duration-500"
     >
       {/* Background Ambience - Dark Mode Only for Radial */}
       <div className="absolute inset-0 bg-transparent dark:bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] dark:from-indigo-950/30 dark:via-black dark:to-black" />
