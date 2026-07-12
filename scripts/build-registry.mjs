@@ -20,7 +20,7 @@ async function buildRegistry() {
 
     // Create registry object
     const registry = {
-      name: 'cover-flow',
+      name: 'vinyl-stack',
       type: 'registry:ui',
       dependencies: ['framer-motion', 'lucide-react'],
       files: [
@@ -40,7 +40,7 @@ async function buildRegistry() {
     };
 
     // Write registry JSON
-    const registryFile = path.join(REGISTRY_DIR, 'cover-flow.json');
+    const registryFile = path.join(REGISTRY_DIR, 'vinyl-stack.json');
     await fs.writeFile(registryFile, JSON.stringify(registry, null, 2), 'utf8');
     
     console.log(`Successfully built registry at: ${registryFile}`);

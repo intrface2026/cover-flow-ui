@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("npx shadcn add https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json");
+    navigator.clipboard.writeText("npx shadcn add https://intrface2026.github.io/vinyl-stack/registry/vinyl-stack.json");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
           style={{ animationDelay: "0.2s", transform: "translateY(20px)" }}
         >
           <span className="block text-5xl sm:text-6xl md:text-7xl font-bold text-foreground tracking-tighter max-w-[20ch]">
-            iOS-like Cover Flow for React.
+            iOS-like VinylStack for React.
           </span>
         </h1>
 
@@ -94,7 +94,7 @@ export const Hero: React.FC = () => {
             ) : (
               <Copy className="h-4 w-4" />
             )}
-            npx shadcn add https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json
+            npx shadcn add https://intrface2026.github.io/vinyl-stack/registry/vinyl-stack.json
           </button>
         </div>
       </div>

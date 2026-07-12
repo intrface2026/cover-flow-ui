@@ -1,7 +1,7 @@
 {
-  "name": "cover-flow-next",
+  "name": "@intrface2026/vinyl-stack",
   "version": "1.0.0",
-  "private": true,
+  "description": "A React implementation of the classic iOS Cover Flow interface using Tailwind CSS and Framer Motion.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,9 +9,19 @@
     "lint": "next lint",
     "build:registry": "node scripts/build-registry.mjs"
   },
+  "keywords": [
+    "react",
+    "coverflow",
+    "carousel",
+    "framer-motion",
+    "tailwindcss",
+    "ui-component",
+    "shadcn",
+    "vinyl-stack"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/intrface2026/cover-flow-ui.git"
+    "url": "https://github.com/intrface2026/vinyl-stack.git"
   },
   "author": "Prathamesh Naidu",
   "license": "MIT",

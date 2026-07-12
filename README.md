@@ -1,6 +1,6 @@
-# Cover Flow UI
+# VinylStack
 
-An open-source, iOS-style coverflow component for React. It features real spring physics (via Motion), Tailwind CSS styling, drag/touch/wheel interactions, and dark mode support.
+An open-source, iOS-style vinylstack component for React. It features real spring physics (via Motion), Tailwind CSS styling, drag/touch/wheel interactions, and dark mode support.
 
 ## Installation
 
@@ -9,7 +9,7 @@ An open-source, iOS-style coverflow component for React. It features real spring
 You can install this component directly using the Shadcn CLI:
 
 ```bash
-pnpm dlx shadcn@latest add https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json
+pnpm dlx shadcn@latest add https://intrface2026.github.io/vinyl-stack/registry/vinyl-stack.json
 ```
 
 ### Manual Installation

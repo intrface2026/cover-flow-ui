@@ -1,5 +1,5 @@
 {
-  "name": "cover-flow",
+  "name": "vinyl-stack",
   "type": "registry:ui",
   "dependencies": [
     "framer-motion",

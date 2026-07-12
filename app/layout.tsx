@@ -6,21 +6,28 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata: Metadata = {
-  title: "Cover Flow — iOS-Style Coverflow Component for React",
-  description: "Open-source React coverflow component with iOS-like spring physics. Drag, touch, wheel and keyboard ready. Built with Motion and Tailwind CSS. Install via shadcn CLI or npm.",
-  authors: [{ name: "Prathamesh Naidu", url: "https://intrface.in" }],
-  keywords: "coverflow, cover flow, react coverflow component, iOS cover flow, iTunes cover flow, 3d carousel react, react carousel, shadcn coverflow, shadcn carousel, framer motion carousel, motion carousel, nextjs coverflow, tailwind carousel, album art carousel",
+  title: {
+    default: "VinylStack - iOS-style React Component",
+    template: "%s | VinylStack",
+  },
+  description: "Open-source React VinylStack component with iOS-like spring physics. Drag, touch, wheel and keyboard ready. Built with Motion and Tailwind CSS. Install via shadcn CLI or npm.",
+  applicationName: "VinylStack",
+  keywords: "coverflow, cover flow, vinyl stack, vinylstack, react component, iOS cover flow, iTunes cover flow, 3d carousel react, react carousel, shadcn coverflow, shadcn carousel, framer motion carousel, motion carousel, nextjs coverflow, tailwind carousel, album art carousel",
+  authors: [{ name: "Prathamesh Naidu" }],
+  creator: "Prathamesh Naidu",
   openGraph: {
-    title: "Cover Flow — iOS-Style Coverflow Component for React",
-    description: "Open-source React coverflow component with iOS-like spring physics. Drag, touch, wheel and keyboard ready. Built with Motion and Tailwind CSS.",
     type: "website",
+    locale: "en_US",
     url: "https://intrface.in",
-    siteName: "Cover Flow",
+    title: "VinylStack - Open Source React Component",
+    description: "Open-source React VinylStack component with iOS-like spring physics. Drag, touch, wheel and keyboard ready. Built with Motion and Tailwind CSS.",
+    siteName: "VinylStack",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cover Flow — iOS-Style Coverflow Component for React",
-    description: "Open-source React coverflow component with iOS-like spring physics. Built with Motion and Tailwind CSS.",
+    title: "VinylStack - iOS-style React Component",
+    description: "Open-source React VinylStack component with iOS-like spring physics. Built with Motion and Tailwind CSS.",
+    creator: "@intrface2026",
   },
 };
 
