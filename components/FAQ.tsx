@@ -30,7 +30,7 @@ export const FAQ: React.FC = () => {
               <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 ease-out group-open:rotate-45" />
             </summary>
             <p className="pb-5 pr-8 text-[15px] leading-relaxed text-muted-foreground">
-              Install the Cover Flow component with the shadcn CLI — npx shadcn add https://intrface.in/registry/cover-flow.json — or from npm as @intrface2026/cover-flow-ui. Then render the CoverFlow component with your items. It works in any modern React or Next.js App Router project.
+              Install the Cover Flow component with the shadcn CLI — npx shadcn add https://raw.githubusercontent.com/intrface2026/cover-flow-ui/main/public/registry/cover-flow.json — or from npm as @intrface2026/cover-flow-ui. Then render the CoverFlow component with your items. It works in any modern React or Next.js App Router project.
             </p>
           </details>
 

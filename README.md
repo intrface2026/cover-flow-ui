@@ -9,7 +9,7 @@ An open-source, iOS-style coverflow component for React. It features real spring
 You can install this component directly using the Shadcn CLI:
 
 ```bash
-pnpm dlx shadcn@latest add https://intrface.in/registry/cover-flow.json
+pnpm dlx shadcn@latest add https://raw.githubusercontent.com/intrface2026/cover-flow-ui/main/public/registry/cover-flow.json
 ```
 
 ### Manual Installation
