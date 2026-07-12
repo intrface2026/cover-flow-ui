@@ -55,11 +55,11 @@ export const Hero: React.FC = () => {
             <br />
             <span className="group cursor-pointer">
               Built for the modern web with{" "}
-              <span className="font-semibold transition-all duration-200 group-hover:text-sky-700 dark:group-hover:text-sky-400">
+              <span className="font-semibold transition-all duration-500 group-hover:text-sky-700 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#ded4c1] dark:group-hover:via-[#96d2ed] dark:group-hover:to-[#7583bc]">
                 Motion
               </span>{" "}
               and{" "}
-              <span className="font-semibold transition-all duration-200 group-hover:text-sky-700 dark:group-hover:text-sky-400">
+              <span className="font-semibold transition-all duration-500 group-hover:text-sky-700 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#ded4c1] dark:group-hover:via-[#96d2ed] dark:group-hover:to-[#7583bc]">
                 Tailwind.
               </span>
             </span>
