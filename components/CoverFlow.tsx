@@ -42,7 +42,6 @@ const GENRES = [
 export const CoverFlow = () => {
   const [covers, setCovers] = useState<CoverFlowItem[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showHelix, setShowHelix] = useState(false); // Toggle state
 
   // Fetch Data
   useEffect(() => {
@@ -90,29 +89,7 @@ export const CoverFlow = () => {
 
   return (
     <div className="w-full h-[400px] md:h-[600px] relative overflow-hidden z-20 bg-transparent group transition-colors duration-500">
-      {/* If Helix is NOT active, show trigger button */}
-      {!showHelix && (
-        <div className="absolute top-4 right-4 z-[100] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <button
-            onClick={() => setShowHelix(true)}
-            className="group relative flex items-center gap-2 px-5 py-2.5 bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-full border border-white/20 dark:border-white/10 transition-all duration-300 hover:bg-white/50 dark:hover:bg-white/10 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]"
-          >
-            <div className="relative flex items-center justify-center w-5 h-5">
-              <Waves className="w-4 h-4 text-neutral-600 dark:text-neutral-400 transition-colors group-hover:text-black dark:group-hover:text-white" />
-            </div>
-            <span className="text-xs font-medium tracking-wide text-neutral-700 dark:text-neutral-300 group-hover:text-black dark:group-hover:text-white transition-colors">
-              Enter Helix
-            </span>
-          </button>
-        </div>
-      )}
-
-      {/* Conditional Rendering: Helix or Standard Engine */}
-      {showHelix ? (
-        <HelixFlow onBack={() => setShowHelix(false)} />
-      ) : (
-        <CoverFlowEngine items={covers} className="w-full h-full" />
-      )}
+      <CoverFlowEngine items={covers} className="w-full h-full" />
 
       {/* Watermark */}
       <a

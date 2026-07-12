@@ -113,11 +113,7 @@ const useResponsiveParams = () => {
   };
 };
 
-interface HelixFlowProps {
-  onBack: () => void;
-}
-
-export const HelixFlow: React.FC<HelixFlowProps> = ({ onBack }) => {
+export const HelixFlow: React.FC = () => {
   const { covers, loading } = useAlbums("electronic");
   const [activeIndex, setActiveIndex] = useState(0);
   const params = useResponsiveParams();
@@ -209,17 +205,6 @@ export const HelixFlow: React.FC<HelixFlowProps> = ({ onBack }) => {
       {/* Background Ambience - Dark Mode Only for Radial */}
       <div className="absolute inset-0 bg-transparent dark:bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] dark:from-indigo-950/30 dark:via-black dark:to-black" />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay" />
-
-      {/* Back Button */}
-      <button
-        onClick={onBack}
-        className="absolute top-4 right-4 z-[100] flex items-center gap-1.5 px-3 py-1.5 bg-secondary/30 backdrop-blur-md rounded-full border border-border/50 text-muted-foreground transition-all duration-300 hover:text-foreground hover:bg-secondary/50 hover:scale-105"
-      >
-        <Waves className="w-3.5 h-3.5" />
-        <span className="text-xs font-semibold uppercase tracking-wider">
-          Standard View
-        </span>
-      </button>
 
       {/* Title Overlay (Top Right) */}
       {/* Title Overlay (Bottom for Mobile/Desktop Uniformity or Top Left) */}
