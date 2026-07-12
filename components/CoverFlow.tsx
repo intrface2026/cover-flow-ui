@@ -163,7 +163,21 @@ function CoverFlowEngine({
   onItemClick,
   onIndexChange,
 }: CoverFlowProps) {
+  const [isMobile, setIsMobile] = useState(false);
   const [activeIndex, setActiveIndex] = useState(initialIndex);
+  
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const currentItemWidth = isMobile ? 240 : itemWidth;
+  const currentItemHeight = isMobile ? 240 : itemHeight;
+  const currentCenterGap = isMobile ? 120 : centerGap;
+  const currentStackSpacing = isMobile ? 40 : stackSpacing;
+
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const enableScrollRef = useRef(enableScroll);
@@ -331,7 +345,7 @@ function CoverFlowEngine({
 
   const onDrag = (event: any, info: PanInfo) => {
     // Direct mapping of drag distance to index change
-    const deltaIndex = -info.delta.x / (centerGap * 0.8);
+    const deltaIndex = -info.delta.x / (currentCenterGap * 0.8);
     const current = springX.get();
     scrollX.set(current + deltaIndex);
   };
@@ -394,10 +408,10 @@ function CoverFlowEngine({
             item={item}
             index={index}
             scrollX={springX}
-            width={itemWidth}
-            height={itemHeight}
-            stackSpacing={stackSpacing}
-            centerGap={centerGap}
+            width={currentItemWidth}
+            height={currentItemHeight}
+            stackSpacing={currentStackSpacing}
+            centerGap={currentCenterGap}
             rotation={rotation}
             isActive={index === activeIndex}
             enableReflection={enableReflection}

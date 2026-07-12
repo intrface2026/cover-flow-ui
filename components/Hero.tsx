@@ -7,7 +7,6 @@ import { HelixFlow } from "./HelixFlow"; // Assuming HelixFlow is exported simil
 
 export const Hero: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const [activeFlow, setActiveFlow] = useState<"cover" | "helix">("cover");
 
   const handleCopy = () => {
     navigator.clipboard.writeText("npx shadcn add https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json");
@@ -98,33 +97,6 @@ export const Hero: React.FC = () => {
             npx shadcn add https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json
           </button>
         </div>
-
-        {/* Toggle between CoverFlow and HelixFlow */}
-        <div
-          className="mt-8 mb-4 flex items-center justify-center p-1 rounded-full bg-secondary/30 border border-border/50 backdrop-blur-sm animate-fade-in opacity-0 [animation-fill-mode:forwards]"
-          style={{ animationDelay: "0.6s", transform: "translateY(20px)" }}
-        >
-          <button
-            onClick={() => setActiveFlow("cover")}
-            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
-              activeFlow === "cover"
-                ? "bg-foreground text-background shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            Cover Flow
-          </button>
-          <button
-            onClick={() => setActiveFlow("helix")}
-            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
-              activeFlow === "helix"
-                ? "bg-foreground text-background shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            Helix Flow
-          </button>
-        </div>
       </div>
 
       {/* Flow Integration */}
@@ -134,7 +106,7 @@ export const Hero: React.FC = () => {
       >
         <div className="w-full border-dashed border-border/70 relative">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8 pb-20">
-            {activeFlow === "cover" ? <CoverFlow /> : <HelixFlow onBack={() => setActiveFlow("cover")} />}
+            <CoverFlow />
             <div className="hidden sm:block text-center mt-8 text-sm font-semibold text-foreground tracking-wide opacity-50 hover:opacity-100 transition-opacity">
               Horizontal Scroll • Drag • Keyboard
             </div>
