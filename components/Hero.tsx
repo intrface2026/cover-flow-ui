@@ -88,19 +88,13 @@ export const Hero: React.FC = () => {
         >
           <button
             onClick={handleCopy}
-            className="group relative flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-gradient-to-b from-white/60 to-white/20 dark:from-white/10 dark:to-white/5 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(255,255,255,0.03)] rounded-full hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 overflow-hidden"
+            className="group relative flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-gradient-to-b from-white/60 to-white/20 dark:from-white/10 dark:to-white/5 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(255,255,255,0.03)] rounded-full transition-all duration-500 overflow-hidden"
           >
             {/* Liquid shine effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
             
-            <span className="font-mono text-[13px] sm:text-sm tracking-wide text-neutral-700 dark:text-neutral-300 relative z-10 transition-all duration-300">
-              {copied ? (
-                <span className="animate-in slide-in-from-bottom-2 fade-in duration-300 text-emerald-600 dark:text-emerald-400 font-semibold">
-                  Copied to clipboard ٩(◕‿◕)۶
-                </span>
-              ) : (
-                "npx shadcn add https://intrface2026.github.io/vinyl-stack/registry/vinyl-stack.json"
-              )}
+            <span className="font-mono text-[13px] sm:text-sm tracking-wide text-neutral-700 dark:text-neutral-300 relative z-10 transition-colors duration-300">
+              npx shadcn add https://intrface2026.github.io/vinyl-stack/registry/vinyl-stack.json
             </span>
             
             <div className="relative z-10 flex items-center justify-center p-2 rounded-full bg-black/5 dark:bg-white/10 shadow-inner">
