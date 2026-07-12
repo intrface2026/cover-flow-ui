@@ -10,7 +10,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme }) => {
   const [stars, setStars] = useState<number | null>(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/intrface2026/cover-flow-ui")
+    fetch("https://api.github.com/repos/intrface2026/vinyl-stack")
       .then((res) => res.json())
       .then((data) => {
         if (typeof data.stargazers_count === "number") {
@@ -29,22 +29,13 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme }) => {
         >
           <div className="h-4 w-4 rounded-full bg-foreground shadow-sm" />
           <span className="text-sm tracking-tight font-semibold">
-            CoverFlow
+            VinylStack
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-6 text-[13px] font-medium text-muted-foreground">
+        <div className="flex items-center gap-3 pl-2 border-black/5 dark:border-white/10">
           <a
-            className="transition-colors hover:text-foreground"
-            href="#sponsor"
-          >
-            Sponsor
-          </a>
-        </nav>
-
-        <div className="flex items-center gap-3 pl-2 border-l border-black/5 dark:border-white/10">
-          <a
-            href="https://github.com/intrface2026/cover-flow-ui"
+            href="https://github.com/intrface2026/vinyl-stack"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-1.5 px-2 py-1 mr-2 rounded-md text-xs font-medium text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary/50 border border-transparent hover:border-border/50"
