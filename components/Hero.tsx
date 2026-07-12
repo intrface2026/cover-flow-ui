@@ -83,19 +83,33 @@ export const Hero: React.FC = () => {
 
         {/* Copy Command */}
         <div
-          className="flex flex-col items-center border-y w-full border-dashed gap-2 py-4 animate-fade-in opacity-0 [animation-fill-mode:forwards]"
+          className="flex flex-col items-center justify-center w-full gap-2 py-8 animate-fade-in opacity-0 [animation-fill-mode:forwards]"
           style={{ animationDelay: "0.5s", transform: "translateY(20px)" }}
         >
           <button
             onClick={handleCopy}
-            className="flex gap-2 flex-row font-mono text-xs cursor-copy text-muted-foreground hover:text-foreground transition-colors items-center"
+            className="group relative flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-gradient-to-b from-white/60 to-white/20 dark:from-white/10 dark:to-white/5 backdrop-blur-2xl border border-white/50 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(255,255,255,0.03)] rounded-full hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 overflow-hidden"
           >
-            {copied ? (
-              <Check className="h-4 w-4 text-emerald-500" />
-            ) : (
-              <Copy className="h-4 w-4" />
-            )}
-            npx shadcn add https://intrface2026.github.io/vinyl-stack/registry/vinyl-stack.json
+            {/* Liquid shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
+            
+            <span className="font-mono text-[13px] sm:text-sm tracking-wide text-neutral-700 dark:text-neutral-300 relative z-10 transition-all duration-300">
+              {copied ? (
+                <span className="animate-in slide-in-from-bottom-2 fade-in duration-300 text-emerald-600 dark:text-emerald-400 font-semibold">
+                  Copied to clipboard ٩(◕‿◕)۶
+                </span>
+              ) : (
+                "npx shadcn add https://intrface2026.github.io/vinyl-stack/registry/vinyl-stack.json"
+              )}
+            </span>
+            
+            <div className="relative z-10 flex items-center justify-center p-2 rounded-full bg-black/5 dark:bg-white/10 shadow-inner">
+              {copied ? (
+                <Check className="h-4 w-4 text-emerald-500 animate-in spin-in-90 zoom-in duration-300" />
+              ) : (
+                <Copy className="h-4 w-4 text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
+              )}
+            </div>
           </button>
         </div>
 
@@ -132,7 +146,7 @@ export const Hero: React.FC = () => {
         className="w-full mt-2 animate-fade-in opacity-0 [animation-fill-mode:forwards]"
         style={{ animationDelay: "0.7s", transform: "translateY(20px)" }}
       >
-        <div className="w-full border-dashed border-border/70 relative">
+        <div className="w-full relative">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8 pb-20">
             {activeFlow === "cover" ? <CoverFlow /> : <HelixFlow />}
             <div className="hidden sm:block text-center mt-8 text-sm font-semibold text-foreground tracking-wide opacity-50 hover:opacity-100 transition-opacity">
