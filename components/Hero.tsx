@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
   const [activeFlow, setActiveFlow] = useState<"cover" | "helix">("cover");
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("npx shadcn add https://raw.githubusercontent.com/intrface2026/cover-flow-ui/main/public/registry/cover-flow.json");
+    navigator.clipboard.writeText("npx shadcn add https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
             ) : (
               <Copy className="h-4 w-4" />
             )}
-            npx shadcn add https://raw.githubusercontent.com/intrface2026/cover-flow-ui/main/public/registry/cover-flow.json
+            npx shadcn add https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json
           </button>
         </div>
 

@@ -24,7 +24,7 @@ export default function DocsPage() {
                 <span className="text-sm font-medium">Shadcn CLI</span>
               </div>
               <div className="p-4 bg-black/5 dark:bg-white/5 font-mono text-sm text-foreground overflow-x-auto">
-                <span className="text-blue-500">pnpm</span> dlx <span className="text-teal-500">shadcn@latest</span> add <span className="text-muted-foreground">https://raw.githubusercontent.com/intrface2026/cover-flow-ui/main/public/registry/cover-flow.json</span>
+                <span className="text-blue-500">pnpm</span> dlx <span className="text-teal-500">shadcn@latest</span> add <span className="text-muted-foreground">https://intrface2026.github.io/cover-flow-ui/registry/cover-flow.json</span>
               </div>
             </div>
 
