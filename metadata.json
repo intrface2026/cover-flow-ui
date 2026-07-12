@@ -1,0 +1,5 @@
+{
+  "name": "Cover Flow UI",
+  "description": "A React implementation of the classic iOS Cover Flow interface using Tailwind CSS.",
+  "requestFramePermissions": []
+}
